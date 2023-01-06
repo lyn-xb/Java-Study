@@ -158,7 +158,7 @@
 
     > SELECT 字段列表 FROM 表名 WHERE 条件列表;
 
-    <figure><img src=".gitbook/assets/image_condition.png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../.gitbook/assets/image_condition.png" alt=""><figcaption></figcaption></figure>
 
     *   模糊查询\
         模糊查询使用like关键字，可以使用通配符进行占位:\
