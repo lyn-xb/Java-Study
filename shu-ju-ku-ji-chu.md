@@ -1,4 +1,4 @@
-# 数据库
+# 数据库基础
 
 ## 1、相关概念:
 
@@ -183,7 +183,7 @@
 
     （2）分类：
 
-    > * count(列名)：统计数量（一般选用不为null的列）&#x20;
+    > * count(列名)：统计数量（一般选用不为null的列，可以直接使用 count(\*) ）&#x20;
     > * max(列名)：最大值&#x20;
     > * min(列名)：最小值&#x20;
     > * sum(列名)：求和&#x20;
@@ -203,5 +203,41 @@
     > （注意：分组之后，查询的字段为聚合函数和分组字段，查询其他字段无任何意义）
 
     （2）eg：
+
+    * 查询男同学和女同学各自的数学平均分
+
+    > select sex, avg(math) from stu group by sex;
+    >
+    > 注意：分组之后，查询的字段为聚合函数和分组字段，查询其他字段无任何意义
+    >
+    > select name, sex, avg(math) from stu group by sex; -- 这里查询name字段就没有任何意义
+
+    * 查询男同学和女同学各自的数学平均分，以及各自人数
+
+    > select sex, avg(math),count(\*) from stu group by sex;
+
+    * 查询男同学和女同学各自的数学平均分，以及各自人数，要求：分数低于70分的不参与分组
+
+    > select sex, avg(math),count(\*) from stu where math > 70 group by sex
+
+    * 查询男同学和女同学各自的数学平均分，以及各自人数，要求：分数低于70分的不参与分组，分组之后人数大于2个的
+
+    > select sex, avg(math),count(_) from stu where math > 70 group by sex having count(_) > 2;
+
+    （3）总结
+
+    > where 和 having 区别：&#x20;
+    >
+    > * 执行时机不一样：where 是分组之前进行限定，不满足where条件，则不参与分组，而having是分组之后对结果进行过滤
+    > * 可判断的条件不一样：where 不能对聚合函数进行判断，having 可以
+*   分页查询
+
+    （1）语法：
+
+    > SELECT 字段列表 FROM 表名 LIMIT 起始索引 , 查询条目数;
+
+    （2）索引计算公式：
+
+    > 起始索引 = (当前页码 - 1) \* 每页显示的条数
 
 #### (4) DCL(Data Control Language):数据控制语言，用来定义数据库的访问权限和安全级别，及创建用户
