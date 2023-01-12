@@ -1,6 +1,6 @@
 # 数据库基础
 
-## 1、相关概念:
+## 1 相关概念:
 
 * DataBase,DB:
 * DataBase Management System,DBMS:
@@ -11,7 +11,7 @@
   * 网络型数据库
 * Structures Query Language,SQL:操作关系型数据库的同归标准
 
-## 2、MySQL
+## 2 MySQL
 
 *   初始化mysql：
 
@@ -33,7 +33,7 @@
 
     > quit\exit
 
-## 3、SQL
+## 3 SQL
 
 ### 通用语法：
 
