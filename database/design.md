@@ -97,7 +97,7 @@
 
   经过分析发现，订单表和商品表都属于多的一方，此时需要创建一个中间表，在中间表中添加订单表的外键和商品表的外键指向两张表的主键：
 
-  <img src="C:/Users/lyn/Desktop/JavaWeb-资料/day02-MySQL高级/ppt/assets/image-20210724135054834.png" alt="image-20210724135054834" style="zoom:70%;" />
+  <img src="../.gitbook/assets/image-20210724135054834.png" alt="image-20210724135054834" style="zoom:70%;" />
 
   建表语句如下：
 
@@ -186,4 +186,4 @@ create table tb_user (
 
 ​	查看表结构模型图：
 
-<img src="../.gitbook//assets/image-20210724141445785.png" alt="image-20210724141445785" style="zoom:80%;" />
+<img src="../.gitbook/assets/image-20210724141445785.png" alt="image-20210724141445785" style="zoom:80%;" />

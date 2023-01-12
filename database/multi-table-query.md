@@ -59,7 +59,7 @@ select * from emp , dept where emp.dep_id = dept.did;
 
 * 连接查询
 
-  ​                                                                     <img src="C:/Users/lyn/Desktop/JavaWeb-资料/day02-MySQL高级/ppt/assets/image-20210724174717647.png" alt="image-20210724174717647" style="zoom:80%;" /> 
+  ​                                                                     <img src="../.gitbook/assets/image-20210724174717647.png" alt="image-20210724174717647" style="zoom:80%;" /> 
 
   * 内连接查询 ：相当于查询AB交集数据
   * 外连接查询
@@ -114,7 +114,7 @@ SELECT 字段列表 FROM 表1 [INNER] JOIN 表2 ON 条件;
 
     执行语句结果如下：
 
-    <img src="C:/Users/lyn/Desktop/JavaWeb-资料/day02-MySQL高级/ppt/assets/image-20210724175518159.png" alt="image-20210724175518159" style="zoom:80%;" />
+    <img src="../.gitbook/assets/image-20210724175518159.png" alt="image-20210724175518159" style="zoom:80%;" />
 
     上面语句中使用表名指定字段所属有点麻烦，sql也支持给表指别名，上述语句可以改进为
 
