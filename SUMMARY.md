@@ -7,6 +7,6 @@
 * [约束](database/yue-shu.md)
 
 + [数据库设计](database/design.md)
-+ [多表查询](database/multi-table query.md)
++ [多表查询](database/multi-table-query.md)
 + [事务](database/transaction.md)
 
