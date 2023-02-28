@@ -19,8 +19,8 @@
 
 ## Spring MVC
 
-+ [Spring MVC_1](spring mvc/SpringMVC_1.md)
++ [Spring MVC_1](springmvc/SpringMVC_1.md)
 
-+ [Spring MVC_2](spring mvc/SpringMVC_1.md)
++ [Spring MVC_2](springmvc/SpringMVC_1.md)
 
   
