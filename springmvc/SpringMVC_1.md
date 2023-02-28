@@ -1,6 +1,4 @@
-## SpringMVC_day01
-
-**今日内容**
+## SpringMVC_基础
 
 >* 理解SpringMVC相关概念
 >* 完成SpringMVC的入门案例
@@ -32,7 +30,7 @@ SSM整合是把咱们所学习的SpringMVC+Spring+Mybatis整合在一起来完�
 3. 能够根据实际业务建立前后端开发通信协议并进行实现
 4. ==基于SSM整合技术开发任意业务模块功能==
 
-## 1，SpringMVC概述
+## 1、SpringMVC概述
 
 学习SpringMVC我们先来回顾下现在web程序是如何做的，咱们现在web程序大都基于三层架构来实现。
 
@@ -80,7 +78,7 @@ SSM整合是把咱们所学习的SpringMVC+Spring+Mybatis整合在一起来完�
 
   这里所说的优点，就需要我们在使用的过程中慢慢体会。
 
-## 2，SpringMVC入门案例
+## 2、SpringMVC入门案例
 
 因为SpringMVC是一个Web框架，将来是要替换Servlet,所以先来回顾下以前Servlet是如何进行开发的?
 
@@ -704,7 +702,7 @@ public class ServletContainersInitConfig extends AbstractAnnotationConfigDispatc
 | 作用     | 设置spring配置类扫描路径，用于加载使用注解格式定义的bean     |
 | 相关属性 | excludeFilters:排除扫描路径中加载的bean,需要指定类别(type)和具体项(classes)<br/>includeFilters:加载指定的bean，需要指定类别(type)和具体项(classes) |
 
-## 3，PostMan工具的使用
+## 3、PostMan工具的使用
 
 ### 3.1 PostMan简介
 
@@ -877,7 +875,7 @@ public class ServletContainersInitConfig extends AbstractAnnotationConfigDispatc
 
 * UserController有一个save方法，访问路径为`http://localhost/save`
 * BookController也有一个save方法，访问路径为`http://localhost/save`
-* 当访问`http://localhost/saved`的时候，到底是访问UserController还是BookController?
+* 当访问`http://localhost/save`的时候，到底是访问UserController还是BookController?
 
 #### 4.1.2 问题分析
 
@@ -1281,7 +1279,7 @@ public String commonParamDifferentName(String userName , int age){
 ```java
 @RequestMapping("/commonParamDifferentName")
     @ResponseBody
-    public String commonParamDifferentName(@RequestPaam("name") String userName , int age){
+    public String commonParamDifferentName(@RequestParam("name") String userName , int age){
         System.out.println("普通参数传递 userName ==> "+userName);
         System.out.println("普通参数传递 age ==> "+age);
         return "{'module':'common param different name'}";
@@ -1623,7 +1621,7 @@ SpringMVC接收JSON数据的实现步骤为:
 
 前面我们处理过简单数据类型、POJO数据类型、数组和集合数据类型以及JSON数据类型，接下来我们还得处理一种开发中比较常见的一种数据类型，`日期类型`
 
-日期类型比较特殊，因为对于日期的格式有N多中输入方式，比如:
+日期类型比较特殊，因为对于日期的格式有N多种输入方式，比如:
 
 * 2088-08-18
 * 2088/08/18
@@ -1947,7 +1945,7 @@ public class UserController {
     
     @RequestMapping("/toJumpPage")
     //注意
-    //1.此处不能添加@ResponseBody,如果加了该注入，会直接将page.jsp当字符串返回前端
+    //1.此处不能添加@ResponseBody,如果加了该注释，会直接将page.jsp当字符串返回前端
     //2.方法需要返回String
     public String toJumpPage(){
         System.out.println("跳转页面");
@@ -2072,7 +2070,7 @@ public class UserController {
 * 对象转Json数据(POJO -> json)
 * 集合转Json数据(Collection -> json)
 
-## 5，Rest风格
+## 5、Rest风格
 
 对于Rest风格，我们需要学习的内容包括:
 

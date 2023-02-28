@@ -21,6 +21,6 @@
 
 + [Spring MVC_1](springmvc/SpringMVC_1.md)
 
-+ [Spring MVC_2](springmvc/SpringMVC_1.md)
++ [Spring MVC_2](springmvc/SpringMVC_2.md)
 
   
