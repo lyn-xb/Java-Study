@@ -5,14 +5,14 @@
 目前已经学习了一些数据结构，用于有效地搜索数据结构中项目的存在。例如二叉搜索树，2-3树等平衡二叉搜索树。但是，这些结构存在一定限制：
 
 - 它们要求项目具有可比性，对于某些对象，这个问题可能没有意义
-- 它们给出的时间复杂度为 Θ(logn)，但是可以做到更好的性能
+- 它们给出的时间复杂度为 Θ(*logn*)，但是可以做到更好的性能
 
 ## 思考1
 
 创建一个类型和大小为 2 亿的 ArrayList。默认情况下，让一切都为`false`
 
-+ `add(int x)`只是将 ArrayList 中`x`的位置设置为 `true`，只需 Θ(1) 时间
-+ `contains(int x)`仅返回 ArrayList 中`x`的位置是 `true`还是 `false`，也只需要 Θ(1) 时间
++ `add(int x)`只是将 ArrayList 中`x`的位置设置为 `true`，只需 Θ(*1*) 时间
++ `contains(int x)`仅返回 ArrayList 中`x`的位置是 `true`还是 `false`，也只需要 Θ(*1*) 时间
 
 ```java
 public class DataIndexedIntegerSet {
@@ -136,7 +136,7 @@ public static int asciiToInt(String s) {
   - 如果索引没有项目，则创建新的链表
 
   - 如果索引已有链表，检查列表以查看项目是否已在其中。如没有将项目添加到列表
-  - Θ(*Q*)(Q链表最长长度)
+  - Θ(*Q*)(Q：链表最长长度)
 
 
 + `contains`
@@ -199,3 +199,8 @@ public static int asciiToInt(String s) {
     + 上述思考中的经验
     + 使用一个小素数的“基数”：使用126作为基数意味着任何以相同的最后 32 个字符（`int`范围`2^32`,而从第`33`位开始就变成`n*63^33*2^33`，无论`n`是多少都对`hashcode`没有影响）结尾的字符串都具有相同的哈希码，发生这种情况是因为溢出，使用质数有助于避免溢出而导致的哈希冲突，为什么是小素数？因为它更容易计算
 
+总的来说，有了好的哈希函数和调整大小，运算运行时被摊销为θ(*1*）
+
+![image-20230427101845667](assets\image-20230427101845667.png)
+
+> 一篇很好的文章：[HashMap实现原理及源码分析 - dreamcatcher-cx - 博客园 (cnblogs.com)](https://www.cnblogs.com/chengxiao/p/6059914.html)
