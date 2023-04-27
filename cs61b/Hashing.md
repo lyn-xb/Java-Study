@@ -172,7 +172,7 @@ public static int asciiToInt(String s) {
     + 开放地址法的优点是不需要额外空间，空间利用率高，但是代价是查找、删除元素时需要进行重新哈希，并且容易出现聚集现象
     + 链地址法的优点是查找、删除元素简单，不会出现聚集现象。但是需要额外空间维护链表,并且查找元素的时间复杂度较高
 
-  > Java中的`Hash Map`和`Hash Table使用链地址法来解决冲突,每个哈希槽中的元素以链表的形式保存
+  > Java中的`Hash Map`和`Hash Table`使用链地址法来解决冲突,每个哈希槽中的元素以链表的形式保存
 
 + 如果负载系数`L = N/M`大于**负载系数阈值**，则增加`M`
 
@@ -203,4 +203,8 @@ public static int asciiToInt(String s) {
 
 ![image-20230427101845667](assets\image-20230427101845667.png)
 
-> 一篇很好的文章：[HashMap实现原理及源码分析 - dreamcatcher-cx - 博客园 (cnblogs.com)](https://www.cnblogs.com/chengxiao/p/6059914.html)
+> 拓展读物：  
+> + 一篇很好的文章：[HashMap实现原理及源码分析 - dreamcatcher-cx - 博客园 (cnblogs.com)](https://www.cnblogs.com/chengxiao/p/6059914.html)  
+> + 将可变对象存储在HashSet或HashMap中带来的问题：https://blog.csdn.net/hubianxiaohang/article/details/17885631?ydreferer=aHR0cHM6Ly9jbi5iaW5nLmNvbS8%3D  
+> + Java Object中的hashCode()实现：https://blog.csdn.net/weixin_45244678/article/details/107256002  
+> + Java中在不覆盖hashCode的情况下永远不要覆盖equals：Java 中 HashMap、Hashset 等集合类型的实现都是基于哈希表来进行的。在使用哈希表时，我们需要确保对象的哈希值是稳定的，即相同的对象应该产生相同的哈希值。 在 Java 中，如果两个对象相等（equals() 方法返回 true），它们的哈希值也必须相等。如果我们没有重写一个类的 hashCode() 方法，那么这个类默认会使用 Object 类中的 hashCode() 方法，该方法对于不同的对象会产生不同的哈希值，这就可能导致出现哈希冲突，进而影响到哈希表的性能
