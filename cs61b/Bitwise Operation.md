@@ -105,6 +105,22 @@ a ^= b;
 ```
 > 理解：a^b储存了将a、b不一样的位置变为了1，不一样的为0，考虑到x^0 = x，x^1 = ~x，当a^(a^b)，相当于把a中与b一样的位保留原状，将与b不一样的位取反，进而得到b
 
++ Brian Kernighan 算法：
+
+> 是一种用于计算二进制数中 1 的位数的算法。这个算法是由 Brian Kernighan 提出的，其核心思想是通过每次去掉一个二进制数中最右边的一个 1 并将其计数来计算二进制数中 1 的位数。这个算法的时间复杂度与二进制数中 1 的位数成正比，比其他普通的位运算法和查表法都要快。
+
+具体来说，Brian Kernighan 算法的实现可以如下：
+
+```java
+public static int countSetBits(int num) {
+    int count = 0;
+    while (num != 0) {
+        num &= (num - 1);
+        count++;
+    }
+}
+```
+
 + 加一
 
 ```java
@@ -149,6 +165,10 @@ b&((a-b)>>31) | a&(~(a-b)>>31)
 ```java
 a&((a-b)>>31) | b&(~(a-b)>>31))
 ```
+
+## 4、相关题目
+
++ [Leetcode 题解 - 位运算 | CS-Notes (cyc2018.xyz)](http://www.cyc2018.xyz/算法/Leetcode 题解/Leetcode 题解 - 位运算.html)
 
 ## 参考：
 
